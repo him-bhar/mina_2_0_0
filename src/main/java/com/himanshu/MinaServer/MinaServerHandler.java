@@ -1,5 +1,6 @@
 package com.himanshu.MinaServer;
 
+import org.apache.mina.core.future.WriteFuture;
 import org.apache.mina.core.service.IoHandler;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
@@ -49,7 +50,7 @@ public class MinaServerHandler implements IoHandler {
         System.out.println("Inside messageReceived");
         System.out.println("Message Received from Remote Host is ="+o.toString());
         System.out.println("You Can put your business logic here.");
-        Object responseMsg = "Output should come from business logic";
+        String responseMsg = "Output should come from business logic";
         ioSession.write(responseMsg);
         ioSession.close(true);
     }

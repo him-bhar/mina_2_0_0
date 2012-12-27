@@ -1,14 +1,10 @@
 package com.himanshu.MinaClient;
 
-import com.sun.org.apache.xpath.internal.operations.*;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.lang.String;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 /**
  * Created by IntelliJ IDEA.
@@ -23,7 +19,7 @@ public class MinaClientTest {
         //Double inputData = Math.random();
         String inputData = "HIMANSHU.BHARDWAJ|";
         //String inputData = "BHARD";
-        Socket clientSocket = new Socket("127.0.0.1", 8892);
+        Socket clientSocket = new Socket("127.0.0.1", 8893);
         PrintWriter pwriterOut = new PrintWriter(clientSocket.getOutputStream(), true);
         pwriterOut.print(inputData);
         pwriterOut.flush();
